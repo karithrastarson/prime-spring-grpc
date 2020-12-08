@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.karithrastarson.grpc.server.grpcserver;
+message PrimeRequest {
+    int32 max = 1;
+}
+message PrimeResponse {
+    string primes = 1;
+}
+service PrimeService {
+    rpc prime(PrimeRequest) returns (PrimeResponse);
+}
