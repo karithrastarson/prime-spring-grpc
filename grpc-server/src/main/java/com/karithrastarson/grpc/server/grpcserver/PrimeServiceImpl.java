@@ -22,13 +22,13 @@ public class PrimeServiceImpl extends PrimeServiceGrpc.PrimeServiceImplBase {
 
     public String primes(int max) {
         String result = "";
-        for (int i = 0; i < max; i++) {
+        for (int i = 0; i <= max; i++) {
             if (isPrime(i)) {
-                result = result.concat(i + ", ");
+                result = result.concat(i + ",");
             }
         }
         if (!result.isEmpty()) {
-            result = result.substring(0, result.length() - 2);
+            result = result.substring(0, result.length() - 1);
         }
         return result;
     }

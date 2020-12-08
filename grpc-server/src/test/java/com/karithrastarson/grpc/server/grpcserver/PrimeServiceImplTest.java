@@ -29,7 +29,7 @@ public class PrimeServiceImplTest {
         String primes = primeService.primes(1);
         assertEquals("", primes);
 
-        primes = primeService.primes(10);
-        assertEquals("2, 3, 5, 7", primes);
+        primes = primeService.primes(17);
+        assertEquals("2,3,5,7,11,13,17", primes);
     }
 }
