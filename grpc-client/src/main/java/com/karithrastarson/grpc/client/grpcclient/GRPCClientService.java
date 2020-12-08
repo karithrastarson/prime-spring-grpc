@@ -16,11 +16,11 @@ public class GRPCClientService {
                 .build();
         PrimeServiceGrpc.PrimeServiceBlockingStub stub
                 = PrimeServiceGrpc.newBlockingStub(channel);
-        PrimeResponse helloResponse = stub.prime(PrimeRequest.newBuilder()
+        PrimeResponse primeResponse = stub.prime(PrimeRequest.newBuilder()
                 .setMax(max)
                 .build());
         channel.shutdown();
-        return helloResponse.getPrimes();
+        return primeResponse.getPrimes();
     }
 }
 

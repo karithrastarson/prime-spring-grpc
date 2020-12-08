@@ -13,7 +13,7 @@ public class PrimeEndpoint {
         this.grpcClientService = grpcClientService;
     }
     @GetMapping("/prime/{max}")
-    public String ping(@PathVariable("max") int max) {
+    public String prime(@PathVariable("max") int max) {
         return grpcClientService.prime(max);
     }
 }
